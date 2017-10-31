@@ -1,2 +1,3 @@
 # mini-project
-part of acad 
+
+> Part of Academics
