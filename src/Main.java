@@ -92,8 +92,8 @@ class mail{
 	
 	public void send(String s){
 		
-    final String myaddr="kondadiprem@gmail.com";
-    final String mypass="nishchal";
+    final String myaddr="";
+    final String mypass="";
     String destaddr=s;
 
     Properties props = new Properties();
