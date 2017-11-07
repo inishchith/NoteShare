@@ -22,7 +22,7 @@ public class mail_bot {
 	
 	public void send(){
     final String myaddr="sharenotepad@gmail.com"; // email 
-    final String mypass="bits_please"; // pass
+    final String mypass=""; // pass
     String destaddr =  email_id;
 
     Properties props = new Properties();
