@@ -1,5 +1,4 @@
-# mini-project
->  Scehduler or notepad :?
+# Sharable NotePad
 
 ### Usage
 
@@ -11,9 +10,7 @@ Open for issues  [here](https://github.com/inishchith/mini-project/issues)
 
 ### Preview
 
-<img src = "./assets/Main.png" width="450">
-<br>
-<img src = "./assets/Ongoing.png" width="450">
+> To Add
 
 ### Note
 

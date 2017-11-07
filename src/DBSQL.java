@@ -10,7 +10,7 @@ public class DBSQL {
 		try{
 			Class.forName("org.sqlite.JDBC");
 			Connection conn = DriverManager.getConnection("jdbc:sqlite:/Users/Nishchith/eclipse-workspace/learn.sqlite");
-			JOptionPane.showMessageDialog(null,"Connection Successful ");
+			// JOptionPane.showMessageDialog(null,"Connection Successful ");
 			return conn; 
 		}
 		catch(Exception e){
