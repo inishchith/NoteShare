@@ -8,6 +8,12 @@ Try executing Main.java .
 
 Open for issues  [here](https://github.com/inishchith/mini-project/issues)
 
+### Installation
+
+>	[SDKMan](http://sdkman.io/)
+>	[Gradle](https://gradle.org/install/)
+> 	[]
+
 ### Preview
 
 > To Add

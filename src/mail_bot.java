@@ -21,9 +21,8 @@ public class mail_bot {
 	}
 	
 	public void send(){
-		
-    final String myaddr=""; // email 
-    final String mypass=""; // pass
+    final String myaddr="sharenotepad@gmail.com"; // email 
+    final String mypass="bits_please"; // pass
     String destaddr =  email_id;
 
     Properties props = new Properties();
@@ -42,7 +41,7 @@ public class mail_bot {
 
     try {
         Message message = new MimeMessage(session);
-        message.setFrom(new InternetAddress("@gmail.com")); // create a  temp here
+        message.setFrom(new InternetAddress("kjsce@gmail.com")); // create a  temp here
         message.setRecipients(Message.RecipientType.TO,
                 InternetAddress.parse(destaddr));
         message.setSubject(subject);

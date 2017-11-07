@@ -1,53 +1,37 @@
 import java.awt.BorderLayout;
-import java.awt.EventQueue;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-import javax.swing.JTabbedPane;
-import javax.swing.JButton;
+import org.fife.ui.rsyntaxtextarea.*;
+import org.fife.ui.rtextarea.*;
 
+import javax.swing.*;
 
 public class About_Page extends JFrame {
 
-	public JFrame frame;
+   public About_Page() {
 
+      JPanel cp = new JPanel(new BorderLayout());
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					About_Page about = new About_Page();
-					about.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+      RSyntaxTextArea textArea = new RSyntaxTextArea(20, 60);
+      textArea.setSyntaxEditingStyle(SyntaxConstants.SYNTAX_STYLE_JAVA);
+      textArea.setCodeFoldingEnabled(true);
+      RTextScrollPane sp = new RTextScrollPane(textArea);
+      cp.add(sp);
 
-	
-	public About_Page() {
-		getContentPane().setLayout(null);
-		
-		JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.TOP);
-		tabbedPane.setBounds(6, 6, 438, 266);
-		getContentPane().add(tabbedPane);
-		
-		JPanel About = new JPanel();
-		tabbedPane.addTab("About", null, About, null);
-		About.setLayout(null);
-		
-		JButton btnNewButton = new JButton("New button");
-		btnNewButton.setBounds(161, 111, 117, 29);
-		About.add(btnNewButton);
-		frame = new JFrame();
-		//frame.getContentPane().setBackground(Color.LIGHT_GRAY);
-		frame.setBounds(100, 100, 450, 300);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.getContentPane().setLayout(null);
-	}
+      setContentPane(cp);
+      setTitle("Text Editor Demo");
+      setDefaultCloseOperation(EXIT_ON_CLOSE);
+      pack();
+      setLocationRelativeTo(null);
+
+   }
+
+   public static void main(String[] args) {
+      // Start all Swing applications on the EDT.
+      SwingUtilities.invokeLater(new Runnable() {
+         public void run() {
+            new About_Page().setVisible(true);
+         }
+      });
+   }
+
 }

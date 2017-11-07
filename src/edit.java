@@ -22,17 +22,25 @@ import java.io.*;
 import javax.swing.filechooser.FileFilter;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
+import org.fife.ui.rsyntaxtextarea.*;
+import org.fife.ui.rtextarea.*;
+
+
+
 public class edit extends JFrame{
-	public JTextArea area = new JTextArea(20,60);
+	RSyntaxTextArea area = new RSyntaxTextArea(30, 80);
 	public JFileChooser fc = new JFileChooser();
-	private String email_id ;
+	
+	public String email_id ;
 	public edit(String email ){
 		this.email_id = email ;
-		JScrollPane scroll = new JScrollPane(area,JScrollPane.VERTICAL_SCROLLBAR_ALWAYS,JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
-		FileFilter txtFilter = new FileNameExtensionFilter("Plain Text","txt");
+		FileFilter txtFilter = new FileNameExtensionFilter("Plain Text","txt","c","cpp","py","md");
 		fc.setFileFilter(txtFilter);
+	      area.setSyntaxEditingStyle(SyntaxConstants.SYNTAX_STYLE_JAVA);
+	      area.setCodeFoldingEnabled(true);
+	      RTextScrollPane sp = new RTextScrollPane(area);
 		
-		add(scroll);
+		add(sp);
 		JMenuBar menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
 		JMenu file = new JMenu("File");
@@ -105,10 +113,10 @@ public class edit extends JFrame{
 			String message = area.getText();
 			String subject = email_id +" shared a note";
 			mail_bot ml = new mail_bot(subject,message,reciepent);
-			// ml.send(); REDUNDANT
-			boolean isValid = Main.isValidEmailAddress(email_id);
-			if(isValid){
-				JOptionPane.showMessageDialog(null,"NoteShared With" +reciepent );
+			ml.send();
+			//boolean isValid = Main.isValidEmailAddress(email_id);
+			if(true){
+				JOptionPane.showMessageDialog(null,"NoteShared With " +reciepent );
 			}
 			else{
 				JOptionPane.showMessageDialog(null,"Invalid reciepent email_id");
