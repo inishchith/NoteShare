@@ -8,15 +8,19 @@ Try executing Main.java .
 
 Open for issues  [here](https://github.com/inishchith/mini-project/issues)
 
-### Installation
+### Installation 
 
 >	[SDKMan](http://sdkman.io/)
+
 >	[Gradle](https://gradle.org/install/)
-> 	[]
+
 
 ### Preview
+<img src="./assets/Login.png">
 
-> To Add
+<img src="./assets/Prompt2.png">
+
+<img src="./assets/Editor.png">
 
 ### Note
 

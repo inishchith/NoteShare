@@ -14,6 +14,7 @@ public class mail_bot {
 	String subject;
 	String message_text;
 	String email_id ;
+	
 	mail_bot(String subject,String message,String id){
 		this.subject = subject ;
 		this.message_text = message ;
